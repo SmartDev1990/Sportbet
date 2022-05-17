@@ -14,6 +14,6 @@ npm install
 npm run dev
 ```
 
-##Links
+###Links
 *White paper: https://openbook.gitbook.io/product-docs/introduction/welcome-to-openbook <br />
 *Live demo: https://openbook-unlv.vercel.app/landing

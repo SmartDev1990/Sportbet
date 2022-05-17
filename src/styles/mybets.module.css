@@ -1,0 +1,101 @@
+.row{
+    color: #212529;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-family: var(--body-font);
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    box-sizing: border-box;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+    color:white;
+    max-width: 1320px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 50px;
+}
+
+.singleInfo{
+    color: #212529;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-family: var(--body-font);
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    box-sizing: border-box;
+    background: #322a71;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.user_stats_image{
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-family: var(--body-font);
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    box-sizing: border-box;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+.textArea{
+    color: #212529;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-family: var(--body-font);
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    box-sizing: border-box;
+    margin-left: 25px;
+    color:white;
+}
+
+.mdr{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #00ff6d;
+}
+
+.grid{
+    color: #212529;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-family: var(--body-font);
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+    flex: 0 0 auto;
+    width: 33.33333333%;
+}

@@ -1,0 +1,190 @@
+.dispositivo {
+  position:relative;
+  transform: scale(1.5);
+}
+.dispositivo .carcasa {
+  background-color:#464E59;
+  border-radius:10px 10px 0 0;
+  height:200px;
+  left:13px;
+  padding:13px;
+  position:relative;
+  width:325px;
+  transition:all 0.5s cubic-bezier(0,.65,0,1.54);
+  -webkit-transition:all 0.5s cubic-bezier(0,.65,0,1.54);
+}
+.dispositivo .pantalla {
+  background-color:#3B434E;
+  height:200px;
+  position:relative;
+  width:300px;
+transition:all 0.5s cubic-bezier(0,.65,0,1.54);
+  -webkit-transition:all 0.5s cubic-bezier(0,.65,0,1.54);
+}
+.dispositivo .sam {
+  bottom:-4px;
+  left:94px;
+  opacity:0;
+  position:relative;
+  position:relative;
+  transition:all 0.5s ease;
+  -webkit-transition:all 0.3s ease;
+}
+.dispositivo .lg {
+  bottom:80px;
+  left:214px;
+  opacity:0;
+  position:relative;
+  transition:all 0.5s ease;
+  -webkit-transition:all 0.3s ease;
+}
+.apple i {
+  background-color:#bbb;
+  font-size:21px;
+  -webkit-background-clip:text;
+  -moz-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow:rgba(255,255,255,0.5) 0px 3px 3px;
+}
+.dispositivo .apple {
+  color:white;
+  left:154px;
+  opacity:1;
+  position:relative;
+  top:4px;
+  transition:all 0.5s ease;
+  -webkit-transition:all 0.3s ease;
+}
+.dispositivo .botoncito {
+  border-radius: 10px;
+  bottom: -3px;
+  height: 1px;
+  left: 51px;
+  opacity: 0;
+  position: relative;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.dispositivo .base {
+  position:relative;
+  left:13px;
+  width:325px;
+  height:37px;
+  background-color:#EBEBEB;
+  border-radius:0 0 10px 10px;
+  border:1px solid #D3D5D6;
+  transition:all 0.5s cubic-bezier(0,.65,0,1.54);
+  -webkit-transition:all 0.5s cubic-bezier(0,.65,0,1.54);
+}
+.dispositivo .soporte {
+  left:13px;
+  width:80px;
+  height:34px;
+  position:relative;
+  background-color:#DDDDDF;
+  left:137px;
+  border-top:8px solid #C9CACC;
+  transition:all 0.5s cubic-bezier(0,.65,0,1.54);
+  -webkit-transition:all 0.4s cubic-bezier(0,.65,0,1.54);
+}
+.dispositivo .sop2 {
+  width:118px;
+  height:6px;
+  position:relative;
+  background-color:#F0F0F0;
+  left:118px;
+  border-bottom:2px solid #C9CACC;
+  transition:all 0.5s cubic-bezier(0,.65,0,1.54);
+  -webkit-transition:all 0.5s cubic-bezier(0,.65,0,1.54);
+}
+
+.dispositivo[data-animation-step="3"]{
+  margin-left:8%;
+}
+
+.pantalla{
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+.dispositivo[data-animation-step="1"] .carcasa .pantalla {
+  background-image:url(/static/images/landing/Ipad_Screenshot_1.jpg);
+  
+}
+
+.dispositivo[data-animation-step="2"] .carcasa .pantalla {
+  background-image:url(/static/images/landing/Desktop_Screenshot_1.jpg);
+}
+
+.dispositivo[data-animation-step="3"] .carcasa .pantalla {
+  background-image:url(/static/images/landing/Phone_Screenshot_1.jpg);
+}
+
+
+/************************************portatil*/
+.dispositivo[data-animation-step="1"] .carcasa {
+  background-color:#4E535A;
+  width:270px;
+  left:40px;
+}
+.dispositivo[data-animation-step="1"] .pantalla {
+  width:245px;
+  background-color:#3B434E;
+
+}
+.dispositivo[data-animation-step="1"] .apple {
+  opacity:0;
+}
+.dispositivo[data-animation-step="1"] .base {
+  width:325px;
+  right:-13px;
+  height:14px;
+  border-bottom:3px solid #ccc;
+}
+.dispositivo[data-animation-step="1"] .soporte {
+  opacity:0;
+}
+.dispositivo[data-animation-step="1"] .sam {
+  opacity:1;
+  bottom: 1px;
+}
+.dispositivo[data-animation-step="1"] .sop2 {
+  opacity: 0;
+}
+/************************************celular 3*/
+.dispositivo[data-animation-step="3"] .carcasa {
+  background-color: #3B3E42;
+  border-radius: 7px;
+  border: 1px solid #9C9C9C;
+  height: 219px;
+  padding: 8px;
+  position: relative;
+  width: 138px;
+  left: 20px;
+}
+.dispositivo[data-animation-step="3"] .pantalla {
+  background-color: #3B434E;
+  width: 120px;
+  height: 190px;
+}
+.dispositivo[data-animation-step="3"] .botoncito {
+  width: 15px;
+  height: 10px;
+  border-radius: 7px;
+  background-color: #3B3E42;
+  border: 1px solid #9C9C9C;
+  opacity: 1;
+}
+.dispositivo[data-animation-step="3"] .soporte {
+  opacity:0;
+}
+.dispositivo[data-animation-step="3"] .apple {
+  opacity:0;
+}
+.dispositivo[data-animation-step="3"] .base {
+  opacity:0;
+}
+.dispositivo[data-animation-step="3"] .sop2 {
+  opacity:0;
+}

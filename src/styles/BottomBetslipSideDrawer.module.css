@@ -1,0 +1,235 @@
+
+@media (min-width:900px){
+    .slip{
+        display:none;
+    }
+}
+
+@media (max-width:900px) {
+    
+    .slip{
+        width: 320px;
+        background-color:white;
+        position:fixed;
+        height:auto;
+        max-height: 60vh;
+        border-radius: 4px;
+        //overflow:hidden;
+        bottom:0px;
+        transition: 0.5s;
+        text-align: center;
+        z-index: 999;
+        left: 5%;
+        width: 90%;
+    }
+
+    .slipOpen{
+        bottom: 0px;
+    }
+    
+    .slipClose{
+        transform: translateY(100%);
+    }
+
+    .slipArrow{
+        position: absolute;
+        top: 13px;
+        width: 25px;
+        height: 25px;
+        z-index: 1;
+        cursor: pointer;
+        transition: 0.5s;
+        left : 15px;
+    }
+    
+    .slipArrow:hover{
+        color:#6bfdcd;
+    }
+    
+    .slipArrowOpen{
+        color:white;
+        left : 15px;
+    }
+    
+    .slipArrowClosed{
+        top :-50px;
+        left : 0px;
+        color:black;
+        transform: scaleY(-1);
+    }
+    
+    .trashBin{
+        height:25px;
+        width:25px; 
+        cursor:pointer;
+        display:block;
+        margin:auto;
+        color: #5c5c5c;
+    }
+    
+    .trashBin:hover{
+        color: black;
+    }
+    
+    .singleTicketDelete{
+        height:100%;
+        width:25px; 
+        cursor:pointer;
+        display:block;
+        margin:auto;
+        color: #5c5c5c;
+    }
+    
+    .singleTicketDelete:hover{
+        color: black;
+    }
+    
+    .presetBetButton{
+        height:28px;
+        width:70px;
+        background-color:#f1f1f1;
+        border-radius:5px;
+        margin-right:5px;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 30px;
+        -webkit-user-select: none;
+        user-select: none;
+        cursor:pointer;
+    }
+    
+    .presetBetButton:hover{
+        font-weight:800;
+    }
+    
+    .submitButton{
+        width:95%;
+        height:56px;
+        align-items:center;
+        text-align:center;
+        background-color:#e57714;
+        color:white;
+        border-radius:10px;
+        cursor:pointer;
+        margin-bottom:10px;
+        border: none;
+    }
+    
+    .submitButton:hover{
+        background-color: #ef882b;
+    }
+    
+
+
+    .slip:after{
+        content: "";
+        z-index: 1;
+        background: radial-gradient(circle, transparent, transparent 50%, white 50%, white 100%) -7px -8px/16px 16px repeat-x;
+        width: 100%;
+        height: 6px;
+        transform: rotate(180deg);
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    
+
+    
+    .slipTopIconBlackBox{
+        height: 50px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        line-height: 50px;
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .ticketIcon{
+        height: 20px;
+        width: 20px;
+        margin-right: 10px;
+    }
+    
+    .slipTabsOutterBox{
+        //border-bottom: 1px solid #d9d9d9;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        background: linear-gradient(135deg, transparent 7px, var(--bg-color) 0) top left, linear-gradient(225deg, transparent 7px, var(--bg-color) 0) top right, linear-gradient(315deg, transparent, var(--bg-color) 0) bottom right, linear-gradient(45deg, transparent, var(--bg-color) 0) bottom left;
+        background-image: radial-gradient(circle at 0 0, transparent 0, var(--bg-color) 0), radial-gradient(circle at 100% 0, transparent 0, var(--bg-color) 0), radial-gradient(circle at 100% 100%, transparent 8px, var(--bg-color) 9px), radial-gradient(circle at 0 100%, transparent 8px, var(--bg-color) 9px);
+        background-size: 52% 52%;
+        background-repeat: no-repeat;
+        background-color: var(--background-default);
+        --bg-color: white;
+        position: relative;
+    }
+    
+    .slipTabsOutterBox:after{
+        content: "";
+        width: 85%;
+        border-top: 2px dashed #d9d9d9;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+    }
+    
+    .boxBeforeBetSlipSelectedMatchBox{
+        content: "";
+        top: 0;
+        background: linear-gradient(135deg, transparent 7px, var(--bg-color) 0) top left, linear-gradient(225deg, transparent 7px, var(--bg-color) 0) top right, linear-gradient(315deg, transparent 7px, var(--bg-color) 0);
+        background-image: radial-gradient(circle at 0 0, transparent 8px, var(--bg-color) 9px), radial-gradient(circle at 100% 0, transparent 8px, var(--bg-color) 9px);
+        background-size: 53%;
+        background-repeat: no-repeat;
+        background-color: var(--background-default);
+        --bg-color: white;
+        position: relative;
+        height: 10px;
+    }
+    
+    .betSlipSelectedMatchBox{
+        max-height:20vh;
+        overflow:overlay;
+    }
+    
+    .slipTabsTrashBinBox{
+        width:50px;
+        height:'100%';
+        margin-left:2px;
+
+    }
+    
+    .betSlipButtonsBox{
+        display:flex;
+        margin-top:15px;
+        justify-content:center;
+        background: linear-gradient(135deg, transparent 7px, var(--bg-color) 0) top left, linear-gradient(225deg, transparent 7px, var(--bg-color) 0) top right, linear-gradient(315deg, transparent, var(--bg-color) 0) bottom right, linear-gradient(45deg, transparent, var(--bg-color) 0) bottom left;
+        background-image: radial-gradient(circle at 0 0, transparent 0, var(--bg-color) 0), radial-gradient(circle at 100% 0, transparent 0, var(--bg-color) 0), radial-gradient(circle at 100% 100%, transparent 8px, var(--bg-color) 9px), radial-gradient(circle at 0 100%, transparent 8px, var(--bg-color) 9px);
+        background-size: 52% 52%;
+        background-repeat: no-repeat;
+        background-color: var(--background-default);
+        --bg-color: white;
+        position: relative;
+        padding-bottom:25px;
+        
+    }
+    
+    .betSlipButtonsBox:after{
+        content: "";
+        width: 85%;
+        border-top: 2px dashed #d9d9d9;
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        transform: translateX(-50%);
+    
+        
+    }    
+}
+

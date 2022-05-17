@@ -1,0 +1,285 @@
+.global{
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --body-font: "Nunito Sans", sans-serif;
+    --body-color: #120f54;
+    --body-alt-color: #0d102f;
+    --bg-color: #f3f5f9;
+    --head-color: #41cd7d;
+    --head-alt-color: #fe8f9c;
+    --border-color: #8790ae;
+    --hover-color: #571ce0;
+    --hover-alt-color: #291b6b;
+}
+
+.overlay{
+    color: #212529;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: top 260px right 10px, top 200px right 0;
+    position: relative;
+    background-size: auto;
+    background-image: unset;
+    minimum-height: 1000px;
+}
+
+.backgroundImg{
+    color: #212529;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    box-sizing: border-box;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.bannerContent{
+    color: #212529;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    box-sizing: border-box;
+    padding: 215px 0 262px;
+    padding-left: 130px;
+}
+
+.row{
+    color: #212529;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    box-sizing: border-box;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.container {
+    color: #212529;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    box-sizing: border-box;
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1320px;
+    position: relative;
+}
+
+.mainContent{
+    color: #212529;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-family: var(--body-font);
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    box-sizing: border-box;
+}
+
+.mainContentText{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-weight: 600;
+    text-transform: initial;
+    transition: all 0.3s;
+    font-size: 76px;
+    line-height: 98.8px;
+    margin-top: -20px;
+}
+
+.tabButton{
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    -webkit-appearance: button;
+    padding: 10px 30px;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.3s;
+    border-radius: 25px;
+    border: 1px solid var(--hover-color);
+    cursor: pointer;
+    margin: 0 5px;
+    text-transform: capitalize;
+    background: #60aeff;
+    color: white;
+    border-color: transparent;
+}
+
+.active{
+    background: #4d63ff;
+    color: white;
+    border-color: transparent;
+}
+
+.navBorder{
+    --border-color: #8790ae;
+    border-radius: 50px;
+    padding: 10px 5px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.subTitle{
+    --head-color: #41cd7d;
+    color: var(--head-color);
+    margin-bottom: 25px;
+    font-size:30px;
+}
+
+.title{
+    font-weight: 700;
+    margin-bottom: 14px;
+    font-size: 57px;
+    line-height: 74.1px;
+    margin-top: -16px;
+}
+
+.titleDescription{
+    margin: 0;
+    font-family: var(--body-font);
+    font-size: 18px;
+    font-weight: 400;
+    color:black;
+    line-height: 30px;
+}
+
+.pt120{
+    padding-top:50px
+}
+
+.faq_hidden{
+    display:none !important;
+}
+
+.bannerSction{
+    margin-top: 90px;
+}
+
+.contactFormMain{
+    border-radius: 30px;
+    padding: 60px 60px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color:black;
+    background-color:--var(--body-bg);
+    border:1px solid black;
+    text-align: center;
+}
+
+.titleSection{
+    margin-bottom: 50px;
+}
+
+.contactFormTitle{
+    color: black ;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.contactFormSubTitle{
+    color: black ;
+    font-size: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.textAreaBox{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+
+
+
+
+
+
+@media (min-width: 1400px)
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1320px;
+}
+@media (min-width: 1200px)
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1140px;
+}
+@media (min-width: 992px)
+.container, .container-lg, .container-md, .container-sm {
+    max-width: 960px;
+}

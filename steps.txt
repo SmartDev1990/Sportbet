@@ -1,0 +1,30 @@
+
+Initial Setup:
+npm run build
+npm run start
+./node.sh if not running
+Make sure metamask is connected to local network
+Open test/test.js and src/config.js in VSCode.
+
+Open http://localhost:3000/ on firefox zoom out a lil
+Open http://localhost:3000/ on chrome
+Open https://docs.google.com/presentation/d/1a7pBdSUCrlLfcXNwkE0VVG3d-2h1XxJE/edit#slide=id.p19 in browser
+Remember ctrl + shift + m for mobile mode
+
+Token address:
+0x6B175474E89094C44Da98b954EedeAC495271d0F
+
+Solidity Demo:
+Close npm run start
+Open npm run dev
+
+1)  Go thru the test.js
+Show before on metamask
+
+2) npx hardhat test --network localhost
+Modify the address in config.js
+
+Show after on metamask
+
+3) Add liquidity -- Clear nonce if needed
+4) Perform Bet

@@ -1,0 +1,49 @@
+src/config.js
+src/@openzeppelin/
+src/@chainlink/
+
+abi/
+db.sqlite
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints
+
+package-lock.json
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+out
+.next
+
+# misc
+.DS_Store
+.eslintcache
+.idea
+/.env
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+#Hardhat
+coverage
+coverage.json
+typechain
+
+#Hardhat files
+cache
+artifacts

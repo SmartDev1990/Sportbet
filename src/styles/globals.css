@@ -1,0 +1,53 @@
+:root {
+	--background-default: #f3f5f9;
+	--mobile-width: 900px;
+  }
+
+.logoStyle {
+	border-radius:1rem;
+}
+
+body{
+	overflow: auto !important;
+	padding-right: 0px !important;
+}
+
+.MuiButtonBase-root.MuiTab-root.MuiTab-labelIcon  > span{
+	margin-right: 10px !important;
+}
+
+/* .cutom-navigation-tabs a.Mui-selected {
+	color: #be5df6 !important;
+} */
+
+.feature-page-pictures-swiper{
+	top: 10px !important
+}
+
+::-webkit-scrollbar {
+	width: 20px;
+  }
+
+::-webkit-scrollbar-track {
+background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #a0aba9;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #a0aba9;
+border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #a0aba9;
+border-radius: 20px;
+border: 6px solid transparent;
+background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background-color: #7b8381;
+}

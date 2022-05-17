@@ -9,13 +9,11 @@ Our innovative model allows OpenBook to facilitate a wider variety of sports and
 ## Getting Started
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
 ```
 npm install
 npm run dev
 ```
 
 ##Links
-White paper: https://openbook.gitbook.io/product-docs/introduction/welcome-to-openbook
-Live demo: https://openbook-unlv.vercel.app/landing
+*White paper: https://openbook.gitbook.io/product-docs/introduction/welcome-to-openbook
+*Live demo: https://openbook-unlv.vercel.app/landing

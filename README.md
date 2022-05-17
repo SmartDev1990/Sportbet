@@ -11,7 +11,8 @@ Our innovative model allows OpenBook to facilitate a wider variety of sports and
 
 ```
 npm install
-npm run dev
+npm run build
+npm run start
 ```
 
 ### Links

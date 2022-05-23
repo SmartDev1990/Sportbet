@@ -21,18 +21,18 @@ export const NavBar = (props) => {
     let styles = props.landingStyles;
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
-  
+
     const handleOpenNavMenu = (event) => {
       setAnchorElNav(event.currentTarget);
     };
     const handleOpenUserMenu = (event) => {
       setAnchorElUser(event.currentTarget);
     };
-  
+
     const handleCloseNavMenu = () => {
       setAnchorElNav(null);
     };
-  
+
     const handleCloseUserMenu = () => {
       setAnchorElUser(null);
     };
@@ -45,8 +45,8 @@ export const NavBar = (props) => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
-          <NextLink 
-            href="/featured" 
+          <NextLink
+            href="/featured"
             passHref
             >
             <a style={{
@@ -60,7 +60,7 @@ export const NavBar = (props) => {
                   margin:"auto"
                 }}>
                   <Image
-                    src="/static/open_book_logo.png"
+                    src="/static/phoneLogo.png"
                     alt="logo"
                     width="50"
                     height="50"
@@ -69,10 +69,10 @@ export const NavBar = (props) => {
                     priority={true}
                   />
                 </div>
-                <Typography color="neutral.100" 
-                variant="h5" 
+                <Typography color="neutral.100"
+                variant="h5"
                 sx={{ml:'20px'}}>
-                  OpenBook
+                  BetBase
                 </Typography>
             </a>
           </NextLink>

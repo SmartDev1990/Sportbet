@@ -53,7 +53,7 @@ export const AccountOverviewChart = (props) => {
     //             theme: 'light'
     //         }
     //     };
-    //     if(typeof window !== 'undefined') 
+    //     if(typeof window !== 'undefined')
     //         console.log(ApexCharts)
     //         // ApexCharts.exec(`support-chart`, 'updateOptions', newSupportChart);
     // }, []);
@@ -70,7 +70,7 @@ export const AccountOverviewChart = (props) => {
                         </Grid>
                         <Grid item>
                             <Typography variant="h4" sx={{ color:"deepskyblue" }}>
-                                1800.00 DAI
+                                1800.00 Base
                             </Typography>
                         </Grid>
                     </Grid>
@@ -83,9 +83,9 @@ export const AccountOverviewChart = (props) => {
             </Grid>
             <div className="mixed-chart">
                 {(typeof window !== 'undefined') &&
-                <Chart {...chartData} /> 
+                <Chart {...chartData} />
                 }
-            </div> 
+            </div>
         </Card>
     )
 }

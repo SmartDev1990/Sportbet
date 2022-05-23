@@ -10,8 +10,8 @@ import {PleaseLogIn} from "@components/Account/PleaseLogIn";
 
 import {connect} from "react-redux";
 
-const Account = (props) => 
-{  
+const Account = (props) =>
+{
     const [tabState, setTabState] = useState("unsettled");
 
     const handleChange = (event, newValue) => {
@@ -20,11 +20,11 @@ const Account = (props) =>
 
 
     return (
-        <>  
+        <>
             <Head>
-                <title>Account | OpenBook</title>
+                <title>Account | BetBase</title>
             </Head>
-            {props.user.loggedIn?            
+            {props.user.loggedIn?
             <Box sx={{py:'25px',px:'50px',width:'95%',minHeight:'1000px'}}>
                 <Box sx={{ width: '100%', backgroundColor: 'var(--background-default)',py:"20px"  }}>
                     <Tabs value={tabState} onChange={(event,newValue)=>handleChange(event,newValue)} centered variant="fullWidth">

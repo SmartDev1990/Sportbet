@@ -16,11 +16,11 @@ import Web3 from 'web3';
 import { Provider } from "react-redux";
 import {persistor,store} from "../store";
 import { PersistGate } from 'redux-persist/integration/react'
-import { MARKET_ABI, MARKET_ADDY} from "../config"
+import { MARKET_ABI, MARKET_ADDY} from "../config1"
 import {setOddsChanging,setNewOdds} from "@actions/oddsActions"
 
 // Setting odds, and store them into redux
-import { getOdds } from "@utils/getOdds" 
+import { getOdds } from "@utils/getOdds"
 
 const clientSideEmotionCache = createEmotionCache();
 

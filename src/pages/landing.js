@@ -13,7 +13,7 @@ import  ChangingDevice from '@components/Landing/ChangingDevice';
 import { FiveStepsToggle } from "@components/Landing/FiveStepsToggle";
 import { FiveStepsForBettor } from "@components/Landing/FiveStepsForBettor";
 import { FiveStepsForBookie } from "@components/Landing/FiveStepsForBookie";
-import { FaqForLanding } from "@components/Landing/FaqForLanding";
+// import { FaqForLanding } from "@components/Landing/FaqForLanding";
 import { Subscribe } from "@components/Landing/Subscribe";
 import { LandingFooter } from "@components/Landing/LandingFooter";
 
@@ -24,7 +24,7 @@ const Dashboard = (props) => {
   return (
     <>
       <Head>
-          <title>OpenBook | Decentralized Betting Platform</title>
+          <title>BetBase | Decentralized Betting Platform</title>
       </Head>
       <NavBar landingStyles={styles} />
       <HeroBanner styles={styles} />
@@ -32,13 +32,13 @@ const Dashboard = (props) => {
       <Box className={styles.uniqueBox}>
         <Box sx={{display:'flex',flexDirection: 'column'}}>
           <Typography className={styles.subTitle}>
-            Why is OpenBook better?
+            Why is BetBase better?
           </Typography>
           <Typography className={styles.title}>
             This is What You Get
           </Typography>
           <Typography className={styles.detailDescriptions3} style={{display:'100%'}}>
-            OpenBook offersaa hybrid sportsbook model and why we think that we can solve so many of the seemingly easy but illusive issues with the growing sports betting industry. 
+            BetBase offersaa hybrid sportsbook model and why we think that we can solve so many of the seemingly easy but illusive issues with the growing sports betting industry.
           </Typography>
         </Box>
 
@@ -48,7 +48,7 @@ const Dashboard = (props) => {
               <Image src="/static/images/landing/why_we_unique_1.png" height={80} width={80} layout="fixed"/>
               <Box sx={{display:'flex',flexDirection:"column",marginLeft:'20px'}}>
                 <Typography sx={{fontSize:'32px',color:'white',textAlign:'left',fontWeight:'500'}}>Single Liquidity Pool</Typography>
-                <Typography sx={{frontSize:'18px',color:'white',textAlign:'left'}}>The OpenBook sportsbook protocol uses a singular liquidity pool to serve all bets, which allows much higher betting limit. </Typography>
+                <Typography sx={{frontSize:'18px',color:'white',textAlign:'left'}}>The BetBase sportsbook protocol uses a singular liquidity pool to serve all bets, which allows much higher betting limit. </Typography>
               </Box>
             </Box>
             <LandingFooterDivider />
@@ -58,7 +58,7 @@ const Dashboard = (props) => {
               <Image src="/static/images/landing/why_we_unique_2.png" height={80} width={80} layout="fixed"/>
               <Box sx={{display:'flex',flexDirection:"column",marginLeft:'20px'}}>
                 <Typography sx={{fontSize:'32px',color:'white',textAlign:'left',fontWeight:'500'}}>No deposit required</Typography>
-                <Typography sx={{frontSize:'18px',color:'white',textAlign:'left'}}>Unlike other betting platform, OpenBook reuiqres no initial deposit. Bet on any game using DAI straight from you wallet. </Typography>
+                <Typography sx={{frontSize:'18px',color:'white',textAlign:'left'}}>Unlike other betting platform, BetBase reuiqres no initial deposit. Bet on any game using Base straight from you wallet. </Typography>
               </Box>
             </Box>
             <LandingFooterDivider />
@@ -67,8 +67,8 @@ const Dashboard = (props) => {
             <Box sx={{display:'flex',flexDirection: 'row'}}>
             <Image src="/static/images/landing/why_we_unique_3.png" height={80} width={80} layout="fixed"/>
               <Box sx={{display:'flex',flexDirection:"column",marginLeft:'20px'}}>
-                <Typography sx={{fontSize:'32px',color:'white',textAlign:'left',fontWeight:'500'}}>Polygon based</Typography>
-                <Typography sx={{frontSize:'18px',color:'white',textAlign:'left'}}>Polygon blockchain is one of the fastest growing blockchains; it offers fast block mining speed, low gas cost and secure transactions.</Typography>
+                <Typography sx={{fontSize:'32px',color:'white',textAlign:'left',fontWeight:'500'}}>Bitgert based</Typography>
+                <Typography sx={{frontSize:'18px',color:'white',textAlign:'left'}}>Bitgert blockchain is one of the fastest growing blockchains; it offers fast block mining speed, low gas cost and secure transactions.</Typography>
               </Box>
             </Box>
             <LandingFooterDivider />
@@ -78,7 +78,7 @@ const Dashboard = (props) => {
             <Image src="/static/images/landing/why_we_unique_6.png" height={80} width={80} layout="fixed"/>
               <Box sx={{display:'flex',flexDirection:"column",marginLeft:'20px'}}>
                 <Typography sx={{fontSize:'32px',color:'white',textAlign:'left',fontWeight:'500'}}>No user details needed</Typography>
-                <Typography sx={{frontSize:'18px',color:'white',textAlign:'left'}}>By facilitating bets with DAI transferred from self-custodial MetaMask wallets, OpenBook is entirely blind to Bettor identities. </Typography>
+                <Typography sx={{frontSize:'18px',color:'white',textAlign:'left'}}>By facilitating bets with Base transferred from self-custodial MetaMask wallets, BetBase is entirely blind to Bettor identities. </Typography>
               </Box>
             </Box>
             <LandingFooterDivider />
@@ -88,7 +88,7 @@ const Dashboard = (props) => {
             <Image src="/static/images/landing/why_we_unique_4.png" height={80} width={80} layout="fixed"/>
               <Box sx={{display:'flex',flexDirection:"column",marginLeft:'20px'}}>
                 <Typography sx={{fontSize:'32px',color:'white',textAlign:'left',fontWeight:'500'}}>Be the bookie</Typography>
-                <Typography sx={{frontSize:'18px',color:'white',textAlign:'left'}}>Not only you can be the bettor on OpenBook, you can also be the bookie by staking DAI coins into our liquidiuty pool and earn stable APR.</Typography>
+                <Typography sx={{frontSize:'18px',color:'white',textAlign:'left'}}>Not only you can be the bettor on BetBase, you can also be the bookie by staking Base coins into our liquidiuty pool and earn stable APR.</Typography>
               </Box>
             </Box>
             <LandingFooterDivider />
@@ -104,7 +104,7 @@ const Dashboard = (props) => {
             Fully Reponsive
           </Typography>
           <Typography className={styles.title}>
-            OpenBook is Designed For All Plaforms
+            BetBase is Designed For All Plaforms
           </Typography>
           <Typography className={styles.detailDescriptions2}>
             Invest and bet on any plaform you like, phones, laptops, ipads, desktops.
@@ -134,7 +134,6 @@ const Dashboard = (props) => {
         />
       )}
 
-      <FaqForLanding landingStyles={styles}></FaqForLanding>
       <Subscribe styles={styles} />
       <LandingFooter />
     </>

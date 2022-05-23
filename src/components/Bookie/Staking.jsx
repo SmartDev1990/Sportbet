@@ -13,7 +13,7 @@ import { makeStyles, styled } from "@mui/styles";
 import { DashboardLayout } from "@components/DashboardLayout";
 import { StakingDataCard } from "@components/Bookie/StakingDataCard";
 import { addLiquidity, getPoolLiquidity, getUserLiquidity, getUserHold, removeLiquidity,handleLiqChange } from "@utils/web3Provider";
-import { DaiIcon } from "@components/Icons/DaiIcon";
+import { BaseIcon } from "@components/Icons/DaiIcon";
 
 
 // Redux Dependencies
@@ -150,7 +150,7 @@ const Staking = (props) => {
         >
           <h3 className={styles.stakingHeader}>Staking Menu</h3>
           <Typography className={styles.stakingText}>
-            Input the amount of DAI you want to stake or from the OpenBook Liquidity
+            Input the amount of Base you want to stake or from the BetBase Liquidity
             Pool
           </Typography>
 
@@ -176,7 +176,7 @@ const Staking = (props) => {
               }}
               onChange={(e) => setDepositAmountInput(e.target.value)}
               InputProps={{
-                endAdornment: <DaiIcon />,
+                endAdornment: <BaseIcon />,
               }}
             />
           </Box>
@@ -188,7 +188,7 @@ const Staking = (props) => {
               sx={{ marginRight: "7px" }}
               onClick={() => {addLiquidity(depositAmountInput);}}
             >
-              Stake DAI
+              Stake Base
             </Button>
 
 
@@ -200,10 +200,10 @@ const Staking = (props) => {
               className={withdrawable ? void(0) : "disbaleButton"}
               onClick={() => {removeLiquidity(depositAmountInput);}}
             >
-              Withdraw DAI
+              Withdraw Base
             </Button>
             <style>
-              {`        
+              {`
                 .disbaleButton{
                   background-color: #8d8d8d;
                   cursor: not-allowed;
@@ -243,7 +243,7 @@ const Staking = (props) => {
             title="Withdrawable"
             data={withdrawableValue}
           />
-          
+
         </Box>
       </Box>
     </>

@@ -1,8 +1,8 @@
 import detectEthereumProvider from '@metamask/detect-provider';
 import Web3 from 'web3';
-const {LIQUIDITY_ABI, LIQUIDITY_ADDY, BET_ABI, BET_ADDY, MARKET_ABI, MARKET_ADDY, DAI_ABI, DAI_ADDY} = require("../config")
+const {LIQUIDITY_ABI, LIQUIDITY_ADDY, BET_ABI, BET_ADDY, MARKET_ABI, MARKET_ADDY, DAI_ABI, DAI_ADDY} = require("../config1")
 const {MaxUint256} = require("@ethersproject/constants");
-var ethers_m = require('ethers');  
+var ethers_m = require('ethers');
 
 //redux
 import {setProvider,setWeb3,setWeb3Loading,setEthers,logIn,logOut,setHasWeb3True,setHasProviderTrue, setBalance, setPoolLiquidity, setUserLiquidity, setCurrentNetwork} from "@actions/userActions";
@@ -19,7 +19,7 @@ export const checkWeb3 =  async () => {
         store.dispatch(setHasProviderTrue());
         store.dispatch(setWeb3Loading(false));
         return true;
-        
+
     }else{
         store.dispatch(setWeb3Loading(false));
         console.error("Please install MetaMask")
@@ -30,14 +30,14 @@ export const checkWeb3 =  async () => {
 export const connectMetaMask = async () =>{
     store.getState().user.hasProvider ?  requestMetaMask() : console.error("Cannot connect MetaMask, try reload browser!")
 
-} 
+}
 
 export const getPoolLiquidity = async () => {
     let web3 = store.getState().user.web3;
     let dai_contract = new web3.eth.Contract(DAI_ABI, DAI_ADDY);
     let res = await dai_contract.methods.balanceOf(LIQUIDITY_ADDY).call()
     let exactAmt = parseFloat(web3.utils.fromWei(String(res), 'ether')).toFixed(2);
-    
+
     store.dispatch(setPoolLiquidity(exactAmt))
 
     return exactAmt;
@@ -59,7 +59,7 @@ export const getUserLiquidity = async () => {
     let dai_contract = new web3.eth.Contract(DAI_ABI, DAI_ADDY);
     let res2 = await dai_contract.methods.balanceOf(LIQUIDITY_ADDY).call()
     let exactAmt2 = parseFloat(web3.utils.fromWei(String(res2), 'ether')).toFixed(2);
-    
+
     store.dispatch(setPoolLiquidity(exactAmt2))
 
 
@@ -78,7 +78,7 @@ export const getUserHold = async () =>{
 
     return exactAmt;
 }
-        
+
 export const addLiquidity = async (amount) => {
     console.log("Adding liquidity");
     let web3 = store.getState().user.web3;
@@ -87,13 +87,13 @@ export const addLiquidity = async (amount) => {
 
     amount = parseInt(amount)
     let amt = BigInt(10 ** 18) * BigInt(amount)
-    
+
 
     let account = await web3.eth.getAccounts()
     let userAddress = account[0];
-    
+
     let x = await token_contract.methods.allowance(userAddress, LIQUIDITY_ADDY).call()
-    
+
     if (x < amt)
     {
         await token_contract.methods.approve(LIQUIDITY_ADDY, MaxUint256).send({from: userAddress})
@@ -111,7 +111,7 @@ export const removeLiquidity = async (amount) => {
 
     amount = parseInt(amount)
     let amt = BigInt(10 ** 18) * BigInt(amount)
-    
+
 
     let account = await web3.eth.getAccounts()
     let userAddress = account[0];
@@ -131,19 +131,19 @@ async function process_bets(bets){
 
     for (const bet of bets) {
         let bet_detail = await contract.methods.betDetailsByID(bet).call()
-        
+
         if (bet_detail[1] == userAddress)
         {
             let match_details = await match_contract.methods.marketDetailsById(bet_detail[2]).call()
-            
-            
+
+
 
             let res = {}
             res['bet_time'] = bet_detail[0]
             res['game_time'] = match_details[0]
             res['league'] = match_details[2][1]
             res['game'] = match_details[1].join(' vs ')
-            
+
             if (bet_detail[3] == '2')
                 res['bet'] = "Draw"
             else
@@ -211,7 +211,7 @@ export const claimBets = async () => {
     let claims = []
     let indexes = []
     let idx = 0
-    for (const bet of bets) 
+    for (const bet of bets)
     {
 
         let bet_detail = await contract.methods.betDetailsByID(bet).call()
@@ -227,9 +227,9 @@ export const claimBets = async () => {
 
     console.log(claims)
     console.log(indexes)
-    
+
     let res = await contract.methods.withdrawBets(claims, indexes).send({from: userAddress})
-    
+
     if (res == true)
     {
 
@@ -242,11 +242,11 @@ export const getMatches = async () => {
     // if (web3 == null)
     web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:8545'));
 
-    
+
     let contract = new web3.eth.Contract(MARKET_ABI, MARKET_ADDY);
     let account = await web3.eth.getAccounts()
     let userAddress = account[0];
-    
+
     let matches = await contract.methods.getAllMarkets().call()
     let all_matches = []
 
@@ -286,7 +286,7 @@ export const getMatches = async () => {
         {
           ...game,
           outcomes: outcome
-        } 
+        }
 
         odds[match[2][0]][match[2][1]].push(game)
         i = i + 1
@@ -299,12 +299,12 @@ export const makeBet = async (ids, picks, amounts) => {
     let web3 = store.getState().user.web3;
     let contract = new web3.eth.Contract(BET_ABI, BET_ADDY);
     let token_contract = new web3.eth.Contract(DAI_ABI, DAI_ADDY);
-    
+
     let sum = 0
     let newAmts = []
 
 
-    for (let i = 0; i < amounts.length; i++) 
+    for (let i = 0; i < amounts.length; i++)
     {
         sum = sum + amounts[i];
         newAmts.push(web3.utils.toWei(String(amounts[i]), 'ether'))
@@ -316,14 +316,14 @@ export const makeBet = async (ids, picks, amounts) => {
     let userAddress = account[0];
 
     let x = await token_contract.methods.allowance(userAddress, BET_ADDY).call()
-    
+
     if (x < exactAmt)
     {
         await token_contract.methods.approve(BET_ADDY, MaxUint256).send({from: userAddress})
     }
-    
+
     let new_picks = []
-    
+
     for (var i=0; i < picks.length; i++)
     {
         if (picks[i] == '1')
@@ -371,7 +371,7 @@ const subscribeNewBlock = async (web3,userAddress) =>{
         if(err){
             console.error(err)
             return
-        }      
+        }
         if(result){
             getUserDaiBalance(web3,userAddress);
             handleLiqChange();
@@ -420,7 +420,7 @@ const requestMetaMask = async () => {
                 subscribeNewBlock(web3,userAddress);
                 getMyBets();
                 getSettledBets();
-            }   
+            }
     }catch(e){
         console.error("Can not retrieve account")
         console.error(e)
@@ -449,7 +449,7 @@ export const switchAccount = async () => {
             store.dispatch(setPreferUsername(userAddress,preferUserName));
             store.dispatch(setPreferUsernameFlag(userAddress));
             store.dispatch(setPreferAvatarStyle(userAddress,"robot"));
-        }     
+        }
         getUserDaiBalance(web3,userAddress);
         subscribeNewBlock(web3,userAddress);
         getMyBets();
@@ -459,7 +459,7 @@ export const switchAccount = async () => {
 }
 
 export const getBetLimit = async (ids) => {
-    
+
     let id_only = []
     ids.map((text, index) => {
         id_only.push(text.split('/')[0]);

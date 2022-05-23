@@ -7,7 +7,7 @@ const card1style = {
     card_bg_color: "rgb(94, 53, 177)",
     card_second_color: "rgb(69, 39, 160)",
     card_title: "Total Winning",
-    card_number: "1800.00 DAI" ,
+    card_number: "1800.00 Base" ,
     card_icon: "/static/images/account/gold_coin.png",
 }
 

@@ -34,7 +34,7 @@ export const MyStake = () => {
   return (
     <>
       <Head>
-        <title>Bookie | OpenBook</title>
+        <title>Bookie | BetBase</title>
       </Head>
       <h1 className={styles.bookieHeader}>WITHDRAWL PAGE COMING SOON</h1>
     </>

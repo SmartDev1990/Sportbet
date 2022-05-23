@@ -9,7 +9,7 @@ const ParlayPage = () =>{
     return(
     <>
          <Head>
-            <title>Parlays | OpenBook</title>
+            <title>Parlays | BetBase</title>
             <link href="/static/parlay.css" rel="stylesheet" />
         </Head>
 
@@ -148,7 +148,7 @@ const ParlayPage = () =>{
                 </svg>
             </div>
         </div>
-    </> 
+    </>
     )
 }
 

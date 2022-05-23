@@ -123,8 +123,8 @@ const DashboardSidebar = (props) => {
           margin: "1rem",
           alignSelf: "center",
           }}>
-          <NextLink 
-            href="/featured" 
+          <NextLink
+            href="/featured"
             passHref
             >
             <a style={{
@@ -136,7 +136,7 @@ const DashboardSidebar = (props) => {
                   margin:"auto"
                 }}>
                   <Image
-                    src="/static/open_book_logo.png"
+                    src="/static/phoneLogo.png"
                     alt="logo"
                     width="100"
                     height="100"
@@ -145,9 +145,9 @@ const DashboardSidebar = (props) => {
                     priority={true}
                   />
                 </div>
-                <Typography color="neutral.100" 
+                <Typography color="neutral.100"
                 variant="h3" >
-                  OpenBook
+                  BetBase (beta)
                 </Typography>
             </a>
           </NextLink>
@@ -165,8 +165,8 @@ const DashboardSidebar = (props) => {
         </Box>
         <CustomDivider/>
         <Box sx={{ flexGrow: 1 }}>{
-            props.odds.isOddsLoading 
-            ? 
+            props.odds.isOddsLoading
+            ?
             <>
             <DashBoardSideBarSkeleton/>
             <DashBoardSideBarSkeleton/>

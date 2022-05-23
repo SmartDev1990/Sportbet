@@ -22,7 +22,7 @@ const WinRow = ({title,number,description}) => {
                             <Grid container alignItems="center" justifyContent="space-between">
                                 <Grid item>
                                     <Typography variant="subtitle1" color="inherit">
-                                        {number} DAI
+                                        {number} Base
                                     </Typography>
                                 </Grid>
                                 <Grid item>
@@ -71,7 +71,7 @@ const LoseRow = ({title,number,description}) => {
                             <Grid container alignItems="center" justifyContent="space-between">
                                 <Grid item>
                                     <Typography variant="subtitle1" color="inherit">
-                                        {number} DAI
+                                        {number} Base
                                     </Typography>
                                 </Grid>
                                 <Grid item>

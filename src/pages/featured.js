@@ -5,7 +5,7 @@ import { BetslipSideDrawerEmptyModal } from "@components/Dashboard/BetslipSideDr
 import  BetslipSideDrawer from "@components/Dashboard/BetslipSideDrawer"
 import { useState,useEffect} from "react"
 import { FeaturedSportPage } from "@components/Dashboard/FeaturedSportPage";
-import {CustomSwiper} from "@components/Dashboard/CustomSwiper" 
+import {CustomSwiper} from "@components/Dashboard/CustomSwiper"
 import { HeroBanner } from "@components/Dashboard/HeroBanner";
 import { SportsBookPageSkeleton } from "@components/Dashboard/SportsBookPageSkeleton";
 import BottomBetSlipDrawer from "@components/Dashboard/BottomBetSlipDrawer";
@@ -15,7 +15,7 @@ import useWindowDimensions from '@hooks/useWindowDimension';
 import {connect} from "react-redux"
 import { setBetSlipOpen } from "@actions/settingsActions";
 
-const Dashboard = (props) => 
+const Dashboard = (props) =>
 {
     const { height, width } = useWindowDimensions();
 
@@ -24,9 +24,9 @@ const Dashboard = (props) =>
     return (
     <>
     <Head>
-        <title>Home | OpenBook</title>
+        <title>Home | BetBase</title>
     </Head>
-        
+
         <Box
             component="main"
             sx={{px:'10px'}}
@@ -38,7 +38,7 @@ const Dashboard = (props) =>
             }}
         >
         <CustomSwiper/>
-        <BetslipSideDrawerEmptyModal setSlipOpen={props.setBetSlipOpen} isSlipOpened={props.settings.isBetSlipOpen}  />    
+        <BetslipSideDrawerEmptyModal setSlipOpen={props.setBetSlipOpen} isSlipOpened={props.settings.isBetSlipOpen}  />
         </Box>
         <Box
             sx={{
@@ -46,7 +46,7 @@ const Dashboard = (props) =>
             }}
         >
         <HeroBanner />
-        <BetslipSideDrawerEmptyModal setSlipOpen={props.setBetSlipOpen} isSlipOpened={props.settings.isBetSlipOpen}  />    
+        <BetslipSideDrawerEmptyModal setSlipOpen={props.setBetSlipOpen} isSlipOpened={props.settings.isBetSlipOpen}  />
         </Box>
 
             <Box
@@ -55,20 +55,20 @@ const Dashboard = (props) =>
                 display: 'flex'
                 }}>
                 {
-                    props.odds.isOddsLoading ? 
-                    <SportsBookPageSkeleton/> : 
+                    props.odds.isOddsLoading ?
+                    <SportsBookPageSkeleton/> :
                     <>
                         <FeaturedSportPage isSlipOpened={props.settings.isBetSlipOpen} data={data}/>
-                        <BetslipSideDrawerEmptyModal setSlipOpen={props.setBetSlipOpen} isSlipOpened={props.settings.isBetSlipOpen}  />  
+                        <BetslipSideDrawerEmptyModal setSlipOpen={props.setBetSlipOpen} isSlipOpened={props.settings.isBetSlipOpen}  />
                     </>
                 }
-            </Box>    
+            </Box>
 
 
-        
+
             { width > 900 ?  <BetslipSideDrawer setSlipOpen={props.setBetSlipOpen} isSlipOpened={props.settings.isBetSlipOpen}/> : <BottomBetSlipDrawer setSlipOpen={props.setBetSlipOpen} isSlipOpened={props.settings.isBetSlipOpen}/>}
-        </Box> 
-        
+        </Box>
+
     </>
 )};
 

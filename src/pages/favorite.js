@@ -12,8 +12,8 @@ import useWindowDimensions from '@hooks/useWindowDimension';
 
 import { setBetSlipOpen } from "@actions/settingsActions";
 
-const Favorite = (props) => 
-{  
+const Favorite = (props) =>
+{
     const [routerReady,setRouterReady] = useState(false);
     const { height, width } = useWindowDimensions();
     const router = useRouter()
@@ -29,7 +29,7 @@ const Favorite = (props) =>
     return (
         <>
         <Head>
-            <title>Favorite Games | OpenBook</title>
+            <title>Favorite Games | BetBase</title>
         </Head>
         <Box
             component="main"
@@ -50,13 +50,13 @@ const Favorite = (props) =>
                         return(
                             <Grid key={match.id} item lg={6} sm={12} xl={4} xs={12}>
                                 <MatchCard key={index}
-                                match1={match.match[0]} 
-                                match2={match.match[1]} 
+                                match1={match.match[0]}
+                                match2={match.match[1]}
                                 outcomes={match.outcomes}
                                 outcomesInUS={match.outcomesInUS}
                                 outcomesInProb={match.outcomesInProb}
-                                dateString={dateStringForProps}  
-                                timeString={timeStringForProps}  
+                                dateString={dateStringForProps}
+                                timeString={timeStringForProps}
                                 matchId={match.id}
                                 ></MatchCard>
                             </Grid>
@@ -64,7 +64,7 @@ const Favorite = (props) =>
                         )
                     })
                 }
-                </Grid>     
+                </Grid>
             </Container>
             <BetslipSideDrawerEmptyModal setSlipOpen={props.setBetSlipOpen} isSlipOpened={props.settings.isBetSlipOpen}  />
             { width > 900 ?  <BetslipSideDrawer setSlipOpen={props.setBetSlipOpen} isSlipOpened={props.settings.isBetSlipOpen}/> : <BottomBetSlipDrawer setSlipOpen={props.setBetSlipOpen} isSlipOpened={props.settings.isBetSlipOpen}/>}

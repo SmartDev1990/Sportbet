@@ -57,7 +57,7 @@ const columns = [
      },
      {
         name: "stake",
-        label: "Stake(DAI)",
+        label: "Stake(Base)",
         options: {
             filter: true,
             sort: true,
@@ -73,14 +73,14 @@ const columns = [
      },
      {
         name: "return",
-        label: "Return(DAI)",
+        label: "Return(Base)",
         options: {
             filter: false,
             sort: true,
         },
      },
 
-     
+
 
 ];
 
@@ -103,7 +103,7 @@ const options = {
     pagination: false,
     selectableRows: 'none',
     viewColumns: false,
-    setRowProps: row => { 
+    setRowProps: row => {
         if (row[0] == "😊") {
           return {
             style: { background: "rgb(89 243 80 / 20%)"}
@@ -126,7 +126,7 @@ const options = {
 
 export const Settled = (props) =>{
     const [loadingData, setLoadingData] = useState(true);
-    
+
     const getMuiTheme = () => createTheme({
         components: {
             MuiTableRow: {
@@ -154,8 +154,8 @@ export const Settled = (props) =>{
     return (
         <>
         {
-            loadingData 
-            ? 
+            loadingData
+            ?
             <LoaderSpin/>
             :
             <Box sx={{display:'flex', alignItems: "center",alignContent: "center",flexDirection:'column'}}>
@@ -165,8 +165,8 @@ export const Settled = (props) =>{
                         title={"Bets"}
                         data={props.settledBets}
                         columns={columns}
-                        options={options}                      
-                    />    
+                        options={options}
+                    />
                             </ThemeProvider>
 
             </Box>
@@ -176,4 +176,4 @@ export const Settled = (props) =>{
         </>
 
     )
-} 
+}

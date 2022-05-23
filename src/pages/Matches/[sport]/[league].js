@@ -14,7 +14,7 @@ import useWindowDimensions from '@hooks/useWindowDimension';
 import {connect} from "react-redux"
 import { setBetSlipOpen } from "@actions/settingsActions";
 
-const Dashboard = (props) => 
+const Dashboard = (props) =>
 {
     const [routerReady,setRouterReady] = useState(false);
     const [league_data,setLeagueData] = useState(null);
@@ -29,7 +29,7 @@ const Dashboard = (props) =>
         setRouterReady(true)
     }, [router.isReady]);
 
-        
+
     // let league_data = {};
     // league_data = data[sport][league]
     let league = null;
@@ -48,9 +48,9 @@ const Dashboard = (props) =>
     return (
     <>
     <Head>
-        <title>{sport} | {league} | Betting | OpenBook</title>
+        <title>{sport} | {league} | Betting | BetBase</title>
     </Head>
-        
+
         <Box
             component="main"
             sx={{
@@ -58,15 +58,15 @@ const Dashboard = (props) =>
             py: 8,
             display: 'flex'
             }}
-        > 
-            {(routerReady && !props.odds.isOddsLoading && league_data) ? 
+        >
+            {(routerReady && !props.odds.isOddsLoading && league_data) ?
             <>
                 <SportsBookPage EPL_data={league_data}/>
                 <BetslipSideDrawerEmptyModal setSlipOpen={props.setBetSlipOpen} isSlipOpened={props.settings.isBetSlipOpen}  />
                 { width > 900 ?  <BetslipSideDrawer setSlipOpen={props.setBetSlipOpen} isSlipOpened={props.settings.isBetSlipOpen}/> : <BottomBetSlipDrawer setSlipOpen={props.setBetSlipOpen} isSlipOpened={props.settings.isBetSlipOpen}/>}
             </>
             :<SportsBookPageSkeleton/>}
-            
+
         </Box>
     </>
 )};

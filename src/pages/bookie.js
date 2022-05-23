@@ -26,7 +26,7 @@ const BookieHomepage = (props) => {
   return (
     <>
       <Head>
-        <title>Bookie | OpenBook</title>
+        <title>Bookie | BetBase</title>
       </Head>
       <Box sx={{ py: "25px", px: "50px", width: "95%", minHeight: "1000px" }}>
         <Box

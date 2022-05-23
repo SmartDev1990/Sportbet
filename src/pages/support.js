@@ -5,12 +5,12 @@ import styles from '@styles/support.module.css';
 import { FAQ } from "@components/Dashboard/FAQ";
 import {ContactForm} from "@components/Dashboard/ContactForm"
 
-const Dashboard = (props) => 
-{  
+const Dashboard = (props) =>
+{
     return (
     <>
     <Head>
-        <title>Support | OpenBook</title>
+        <title>Support | BetBase</title>
     </Head>
         <Box>
             <section className={`${styles.bannerSction}`}>
@@ -25,7 +25,7 @@ const Dashboard = (props) =>
                     </div>
                 </div>
             </div>
-        </section>    
+        </section>
         <ContactForm support_styles={styles}/>
         <FAQ support_styles={styles}/>
     </Box>
@@ -35,6 +35,3 @@ const Dashboard = (props) =>
 Dashboard.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
 
 export default Dashboard;
-
-
-

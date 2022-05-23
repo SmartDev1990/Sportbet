@@ -15,8 +15,8 @@ export const Footer = () => {
                   <Typography sx={{display:'block', color:'black', fontSize:'25px'}}>About</Typography>
                   {["Privacy Policy","About Us", "Documentation" ,"Terms and Conditions"].map((item,index)=>{
                     if(index==2)
-                      return(<Link sx={{display:'block', color:'black'}} underline="hover" key={index} href="https://openbook.gitbook.io/product-docs/introduction/welcome-to-openbook">{item}</Link>)              
-                    else 
+                      return(<Link sx={{display:'block', color:'black'}} underline="hover" key={index} href="">{item}</Link>)
+                    else
                       return( <Link sx={{display:'block', color:'black'}} underline="hover" key={index} href="#">{item}</Link>)
                   })}
                 </Grid>
@@ -38,7 +38,7 @@ export const Footer = () => {
                 </Grid>
                 <Grid item lg={3} sm={6} xl={3} xs={12} >
                   <Typography sx={{display:'block', color:'black', fontSize:'25px'}}>Developers</Typography>
-                  {["API","GitHub", "Smart Contracts" ,"Polygon"].map((item,index)=>{
+                  {["API","GitHub", "Smart Contracts" ,"Bitgert"].map((item,index)=>{
                     return(
                       <Link sx={{display:'block', color:'black'}} underline="hover" key={index} href="#">{item}</Link>
                     )
@@ -47,7 +47,7 @@ export const Footer = () => {
               </Grid>
             </Container>
           <FooterCustomDivider/>
-          <Box sx={{  
+          <Box sx={{
                   display: 'flex',
                   justifyContent: 'left',
                   alignItems: 'left',
@@ -57,18 +57,18 @@ export const Footer = () => {
             <Container>
               <Grid container spacing={3} sx={{backgroundColor:"var(--bg-color)",marginLeft:'30px'}}>
                 <Grid item lg={3} sm={6} xl={3} xs={12}>
-                  <FooterLink><span style={{marginRight:'10px',fontSize:'18px',fontWeight:'500'}}>BET WITH</span><DaiIcon/><span style={{marginLeft:'10px',fontSize:'18px',fontWeight:'500', color:'#f3ad38'}}>DAI</span></FooterLink>
+                  <FooterLink><span style={{marginRight:'10px',fontSize:'18px',fontWeight:'500'}}>BET WITH</span><DaiIcon/><span style={{marginLeft:'10px',fontSize:'18px',fontWeight:'500', color:'#f3ad38'}}>Base</span></FooterLink>
                 </Grid>
                 <Grid item lg={3} sm={6} xl={3} xs={12}>
                 <FooterLink><span style={{marginRight:'10px',fontSize:'18px',fontWeight:'500'}}>DEPOSIT WITH</span><CoinBaseIcon/><span style={{marginLeft:'10px',fontSize:'18px',fontWeight:'500',color:'#1652f0'}}>Coinbase</span></FooterLink>
                 </Grid>
                 <Grid item lg={3} sm={6} xl={3} xs={12}>
-                 
+
                  <FooterLink><span style={{marginRight:'10px',fontSize:'18px',fontWeight:'500'}}>CONNECT BY</span><MetaMaskIcon/><span style={{marginLeft:'10px',fontSize:'18px',fontWeight:'500', color:'#de7111'}}>MetaMask</span></FooterLink>
                 </Grid>
                 <Grid item lg={3} sm={6} xl={3} xs={12}>
-                  <FooterLink><span style={{marginRight:'10px',fontSize:'18px',fontWeight:'500'}}>POWERED BY</span><PolygonIcon/><span style={{marginLeft:'10px',fontSize:'18px',fontWeight:'500',color:'#854ee7'}}>Polygon</span></FooterLink>
-                </Grid> 
+                  <FooterLink><span style={{marginRight:'10px',fontSize:'18px',fontWeight:'500'}}>POWERED BY</span><PolygonIcon/><span style={{marginLeft:'10px',fontSize:'18px',fontWeight:'500',color:'#854ee7'}}>Bitgert</span></FooterLink>
+                </Grid>
               </Grid>
             </Container>
 
